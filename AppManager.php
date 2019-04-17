@@ -58,7 +58,7 @@ appVersion VARCHAR(50) NOT NULL
 
 # -------------------------------------------------------------------
 
-$query = $_GET["query"];
+$query = strtolower($_GET["query"]);
 if (isNullOrEmpty($query)) {
     outputResults("'query' parameter cannot be null", true, null);
     return;
